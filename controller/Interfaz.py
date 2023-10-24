@@ -3,6 +3,7 @@ from tkinter import ttk, filedialog, messagebox
 from AnalizadorLexico import AnalizadorLexico
 from AnalizadorSintactico import AnalizadorSintactico
 from graphviz import Source
+import os
 
 analizador_lexico= AnalizadorLexico()
 analizador_sintactico = AnalizadorSintactico()
@@ -214,6 +215,16 @@ class Controlador():
         messagebox.showinfo(message='Se limpió el contenido.', title='Limpiar')
     
     def cargar_frame(self):
+        ruta_error = 'report\\Error'
+        ruta_token = 'report\\Token'
+        ruta_tree = 'report\\Tree'
+        if not os.path.exists(ruta_error):
+            os.makedirs(ruta_error)
+        if not os.path.exists(ruta_token):
+            os.makedirs(ruta_token)
+        if not os.path.exists(ruta_tree):
+            os.makedirs(ruta_tree)
+        
         #setting title
         self.root.title("Proyecto 2 - 202200174")
         #setting window size
