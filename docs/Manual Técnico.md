@@ -66,25 +66,36 @@ Es una interfaz gráfica de usuario (GUI) desarrollada en Python utilizando el m
 9.  **min("campo");** Expresión regular: `^min\("([^"]+)"\);$`
     
 10.  **exportarReporte("titulo");** Expresión regular: `^exportarReporte\("([^"]+)"\);$`
+
+
 ## Metodo del árbol
 **imprimir("cadena");**
 ![Lenguajes](../img/arbol/imprimir.png)
+
 **imprimirln("cadena");**
 ![Lenguajes](../img/arbol/imprimirln.png)
+
 **conteo();**
 ![Lenguajes](../img/arbol/conteo.png)
+
 **promedio("campo");**
 ![Lenguajes](../img/arbol/promedio.png)
+
 **contarsi("campo", valor);**
 ![Lenguajes](../img/arbol/contarsi.png)
+
 **datos();**
 ![Lenguajes](../img/arbol/datos.png)
+
 **sumar("campo");**
 ![Lenguajes](../img/arbol/sumar.png)
+
 **max("campo");**
 ![Lenguajes](../img/arbol/max.png)
+
 **min("campo");**
 ![Lenguajes](../img/arbol/min.png)
+
 **exportarReporte("titulo");**
 ![Lenguajes](../img/arbol/exportarReporte.png)
 
@@ -92,44 +103,63 @@ Es una interfaz gráfica de usuario (GUI) desarrollada en Python utilizando el m
 ## AFD
 **imprimir("cadena");**
 ![Lenguajes](../img/AFD/imprimir.png)
+
 **imprimirln("cadena");**
 ![Lenguajes](../img/AFD/imprimirln.png)
+
 **conteo();**
 ![Lenguajes](../img/AFD/conteo.png)
+
 **promedio("campo");**
 ![Lenguajes](../img/AFD/promedio.png)
+
 **contarsi("campo", valor);**
 ![Lenguajes](../img/AFD/contarsi.png)
+
 **datos();**
 ![Lenguajes](../img/AFD/datos.png)
+
 **sumar("campo");**
 ![Lenguajes](../img/AFD/sumar.png)
+
 **max("campo");**
 ![Lenguajes](../img/AFD/max.png)
+
 **min("campo");**
 ![Lenguajes](../img/AFD/min.png)
+
 **exportarReporte("titulo");**
 ![Lenguajes](../img/AFD/exportarReporte.png)
+
 
 
 ## Gramática Independiente del Contexto
 **imprimir("cadena");**
 ![Lenguajes](../img/gramatica/imprimir.png)
+
 **imprimirln("cadena");**
 ![Lenguajes](../img/gramatica/imprimirln.png)
+
 **conteo();**
 ![Lenguajes](../img/gramatica/conteo.png)
+
 **promedio("campo");**
 ![Lenguajes](../img/gramatica/promedio.png)
+
 **contarsi("campo", valor);**
 ![Lenguajes](../img/gramatica/contarsi.png)
+
 **datos();**
 ![Lenguajes](../img/gramatica/datos.png)
+
 **sumar("campo");**
 ![Lenguajes](../img/gramatica/sumar.png)
+
 **max("campo");**
 ![Lenguajes](../img/gramatica/max.png)
+
 **min("campo");**
 ![Lenguajes](../img/gramatica/min.png)
+
 **exportarReporte("titulo");**
 ![Lenguajes](../img/gramatica/exportarReporte.png)
