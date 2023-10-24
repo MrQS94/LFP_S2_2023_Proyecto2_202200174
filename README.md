@@ -1,1 +1,4 @@
-# LFP_S2_2023_Proyecto2_202200174
+# Manual Técnico - BizData
+Nombre del Estudiantes: Andres Alejandro Quezada Cabrera
+Carné: 202200174
+Curso y Sección: LENGUAJES FORMALES DE PROGRAMACIÓN Sección B+
