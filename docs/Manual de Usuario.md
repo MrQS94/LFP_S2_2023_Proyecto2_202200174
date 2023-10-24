@@ -1,8 +1,9 @@
 # Manual Usuario - BizData
 Nombre del Estudiantes: Andres Alejandro Quezada Cabrera
-Carné: 202200174
-Curso y Sección: LENGUAJES FORMALES DE PROGRAMACIÓN Sección B+
 
+Carné: 202200174
+
+Curso y Sección: LENGUAJES FORMALES DE PROGRAMACIÓN Sección B+
 ## Introducción
 
 Bienvenido al Manual del Usuario de BizData, la plataforma especializada en análisis de datos comerciales diseñada para pequeñas empresas. Este manual está creado para proporcionarte una comprensión completa de cómo utilizar BizData para tomar decisiones fundamentadas y estratégicas basadas en la importación y análisis de datos estructurados en un formato exclusivo con extensión ".bizdata".
