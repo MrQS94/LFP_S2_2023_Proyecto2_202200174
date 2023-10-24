@@ -71,7 +71,7 @@ class AnalizadorLexico():
                 elif char == '♥':
                     self.tokens.append(Token(char, 'fin del archivo', linea, columna))
                 else:
-                    error = f'Error lexico "{ord(char)}": ' + char
+                    error = f'Error lexico "{ord(char)}": {char}'
                     self.errores.append(Error(error, 'Error lexico', linea, columna))
             elif estado == 1:
                 if char == '\n':
@@ -96,7 +96,7 @@ class AnalizadorLexico():
                 elif ord(char) == 32 or ord(char) == 10 or ord(char) == 9:
                     pass
                 else:
-                    error = f'Error lexico "{ord(char)}": ' + char
+                    error = f'Error lexico "{ord(char)}": {char}'
                     self.errores.append(Error(error, 'Error lexico', linea, columna))   
             elif estado == 4:
                 if char == '\'':
@@ -131,7 +131,7 @@ class AnalizadorLexico():
                     i -= 1
                     estado = 8
                 else:
-                    error = f'Error lexico "{ord(char)}": ' + char
+                    error = f'Error lexico "{ord(char)}": {char}'
                     self.errores.append(Error(error, 'Error lexico', linea, columna))
             elif estado == 8:
                 if self.is_char(char):
@@ -144,7 +144,7 @@ class AnalizadorLexico():
                     columna += 1
                     estado = 0
                 else:
-                    error = f'Error lexico "{ord(char)}": ' + char
+                    error = f'Error lexico "{ord(char)}": {char}'
                     self.errores.append(Error(error, 'Error lexico', linea, columna))
             elif estado == 9:
                 if self.is_num(char):
@@ -176,28 +176,28 @@ class AnalizadorLexico():
                         self.tokens.append(Token('claves', lexema, linea, columna))
                     elif lexema.lower()  == 'registros':
                         self.tokens.append(Token('registros', lexema, linea, columna))
-                    elif lexema == 'imprimir':
+                    elif lexema.lower() == 'imprimir':
                         self.tokens.append(Token('imprimir', lexema, linea, columna))
-                    elif lexema == 'imprimirln':
+                    elif lexema.lower() == 'imprimirln':
                         self.tokens.append(Token('imprimirln', lexema, linea, columna))
-                    elif lexema == 'conteo':
+                    elif lexema.lower() == 'conteo':
                         self.tokens.append(Token('conteo', lexema, linea, columna))
-                    elif lexema == 'promedio':
+                    elif lexema.lower() == 'promedio':
                         self.tokens.append(Token('promedio', lexema, linea, columna))
-                    elif lexema == 'contarsi':
+                    elif lexema.lower() == 'contarsi':
                         self.tokens.append(Token('contarsi', lexema, linea, columna))
-                    elif lexema == 'datos':
+                    elif lexema.lower() == 'datos':
                         self.tokens.append(Token('datos', lexema, linea, columna))
-                    elif lexema == 'sumar':
+                    elif lexema.lower() == 'sumar':
                         self.tokens.append(Token('sumar', lexema, linea, columna))
-                    elif lexema == 'max':
+                    elif lexema.lower() == 'max':
                         self.tokens.append(Token('max', lexema, linea, columna))
-                    elif lexema == 'min':
+                    elif lexema.lower() == 'min':
                         self.tokens.append(Token('min', lexema, linea, columna))
-                    elif lexema == 'exportarReporte':
-                        self.tokens.append(Token('exportarReporte', lexema, linea, columna))
+                    elif lexema.lower() == 'exportarreporte':
+                        self.tokens.append(Token('exportarreporte', lexema, linea, columna))
                     else:
-                        error = f'Error lexico "{ord(char)}": ' + char
+                        error = f'Error lexico "{ord(char)}": {char}'
                         self.errores.append(Error(error, 'Error lexico', linea, columna))
                     lexema = ''
                     i -= 1

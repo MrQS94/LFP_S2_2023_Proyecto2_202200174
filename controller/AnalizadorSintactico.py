@@ -76,7 +76,7 @@ class AnalizadorSintactico():
         self.lista_instrucciones()
     
     def lista_instrucciones(self):
-        if self.list_tokens[self.count].lexema.lower() == 'registros':
+        if self.list_tokens[self.count].lexema.lower().lower() == 'registros':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n' 
@@ -86,7 +86,7 @@ class AnalizadorSintactico():
             self.instrucciones_registros()    
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower() == 'claves':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'claves':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -96,13 +96,13 @@ class AnalizadorSintactico():
             self.instrucciones_claves()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'comentario simple':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'comentario simple':
             self.count += 1
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'comillas simples':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'comillas simples':
             self.count += 1
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'imprimir':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'imprimir':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -113,7 +113,7 @@ class AnalizadorSintactico():
             self.instrucciones_imprimir()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'imprimirln':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'imprimirln':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -124,7 +124,7 @@ class AnalizadorSintactico():
             self.instrucciones_imprimirln()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'datos':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'datos':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -135,7 +135,7 @@ class AnalizadorSintactico():
             self.instrucciones_datos()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'conteo':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'conteo':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -146,7 +146,7 @@ class AnalizadorSintactico():
             self.instrucciones_conteo()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'promedio':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'promedio':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -157,7 +157,7 @@ class AnalizadorSintactico():
             self.instrucciones_promedio()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'contarsi':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'contarsi':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -168,7 +168,7 @@ class AnalizadorSintactico():
             self.instrucciones_contarsi()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'sumar':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'sumar':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -179,7 +179,7 @@ class AnalizadorSintactico():
             self.instrucciones_sumar()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'max':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'max':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -190,7 +190,7 @@ class AnalizadorSintactico():
             self.instrucciones_max()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'min':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'min':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -201,7 +201,7 @@ class AnalizadorSintactico():
             self.instrucciones_min()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema == 'exportarReporte':
+        elif self.list_tokens[self.count].lexema.lower().lower() == 'exportarreporte':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -215,35 +215,35 @@ class AnalizadorSintactico():
     
     # ExportarReporte
     def instrucciones_exportar(self):
-        if self.list_tokens[self.count].lexema == 'exportarReporte':
+        if self.list_tokens[self.count].lexema.lower().lower() == 'exportarreporte':
             self.nodos += f'TokenExportar{self.count_token} [label="TokenExportar"];\n'
             self.nodos += f'Exportar{self.count_token} [label="exportarReporte", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoExportar{self.count_proceso} -> TokenExportar{self.count_token} -> Exportar{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoExportar{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         texto = self.list_tokens[self.count].char
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="{texto}", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoExportar{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoExportar{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                 self.count_parentesis += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoExportar{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -324,35 +324,35 @@ class AnalizadorSintactico():
     
     # Min
     def instrucciones_min(self):
-        if self.list_tokens[self.count].lexema == 'min':
+        if self.list_tokens[self.count].lexema.lower() == 'min':
             self.nodos += f'TokenMin{self.count_token} [label="TokenMin"];\n'
             self.nodos += f'Min{self.count_token} [label="min", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoMin{self.count_proceso} -> TokenMin{self.count_token} -> Min{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoMin{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         texto = self.list_tokens[self.count].char
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="{texto}", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoMin{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoMin{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                 self.count_parentesis += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoMin{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -410,35 +410,35 @@ class AnalizadorSintactico():
     
     # Max
     def instrucciones_max(self):
-        if self.list_tokens[self.count].lexema == 'max':
+        if self.list_tokens[self.count].lexema.lower() == 'max':
             self.nodos += f'TokenMax{self.count_token} [label="TokenMax"];\n'
             self.nodos += f'Max{self.count_token} [label="max", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoMax{self.count_proceso} -> TokenMax{self.count_token} -> Max{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoMax{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         texto = self.list_tokens[self.count].char
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="{texto}", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoMax{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoMax{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                 self.count_parentesis += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoMax{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -496,35 +496,35 @@ class AnalizadorSintactico():
     
     # Sumar
     def instrucciones_sumar(self):
-        if self.list_tokens[self.count].lexema == 'sumar':
+        if self.list_tokens[self.count].lexema.lower() == 'sumar':
             self.nodos += f'TokenSumar{self.count_token} [label="TokenSumar"];\n'
             self.nodos += f'Sumar{self.count_token} [label="sumar", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoSumar{self.count_proceso} -> TokenSumar{self.count_token} -> Sumar{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoSumar{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         cadena = self.list_tokens[self.count].char
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="{cadena}", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoSumar{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoSumar{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                 self.count_parentesis += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoSumar{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -580,48 +580,48 @@ class AnalizadorSintactico():
     
     # Contarsi
     def instrucciones_contarsi(self):
-        if self.list_tokens[self.count].lexema == 'contarsi':
+        if self.list_tokens[self.count].lexema.lower() == 'contarsi':
             self.count += 1
             self.nodos += f'TokenContarsi{self.count_token} [label="TokenContarsi"];\n'
             self.nodos += f'ContarSi{self.count_token} [label="contarsi", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoContarSi{self.count_proceso} -> TokenContarsi{self.count_token} -> ContarSi{self.count_token}\n'
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoContarSi{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         cadena = self.list_tokens[self.count].char
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="{cadena}", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoContarSi{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'coma':
+                            if self.list_tokens[self.count].lexema.lower() == 'coma':
                                 self.nodos += f'SimboloComa{self.count_coma} [label="Coma"];\n'
                                 self.nodos += f'Coma{self.count_coma} [label=",", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoContarSi{self.count_proceso} -> SimboloComa{self.count_coma} -> Coma{self.count_coma}\n'
                                 self.count_coma += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'entero':
+                                if self.list_tokens[self.count].lexema.lower() == 'entero' or self.list_tokens[self.count].lexema.lower() == 'decimal':
                                     entero = self.list_tokens[self.count].char
-                                    self.nodos += f'Entero{self.count_entero} [label="Entero"];\n'
+                                    self.nodos += f'Entero{self.count_entero} [label="Numero"];\n'
                                     self.nodos += f'Entero_Text{self.count_entero} [label="{entero}", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoContarSi{self.count_proceso} -> Entero{self.count_entero} -> Entero_Text{self.count_entero}\n'
                                     self.count += 1
                                     self.count_entero += 1
-                                    if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                                    if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                         self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                         self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                         self.transiciones += f'ProcesoContarSi{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                         self.count_parentesis += 1
                                         self.count += 1
-                                        if self.list_tokens[self.count].lexema == 'punto y coma':
+                                        if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                             self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                             self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                             self.transiciones += f'ProcesoContarSi{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -645,24 +645,24 @@ class AnalizadorSintactico():
                                         error = 'Error sintactico ")"'
                                         self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
                                         self.count += 1
-                                elif self.list_tokens[self.count].lexema == 'comillas dobles':
+                                elif self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                                     self.count += 1
-                                    if self.list_tokens[self.count].lexema == 'cadena':
+                                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                                         valor = self.list_tokens[self.count].char
                                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                                         self.nodos += f'Cadena_Text{self.count_cadena} [label="{valor}", color="#bcf9eb"];\n'
                                         self.transiciones += f'ProcesoContarSi{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                                         self.count_cadena += 1
                                         self.count += 1
-                                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                                             self.count += 1
-                                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                                 self.transiciones += f'ProcesoContarSi{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                                 self.count_parentesis += 1
                                                 self.count += 1
-                                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                                     self.transiciones += f'ProcesoContarSi{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -731,35 +731,35 @@ class AnalizadorSintactico():
     
     # Promedio
     def instrucciones_promedio(self):
-        if self.list_tokens[self.count].lexema == 'promedio':
+        if self.list_tokens[self.count].lexema.lower() == 'promedio':
             self.nodos += f'TokenPromedio{self.count_token} [label="TokenPromedio"];\n'
             self.nodos += f'Promedio{self.count_token} [label="promedio", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoPromedio{self.count_proceso} -> TokenPromedio{self.count_token} -> Promedio{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoPromedio{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         head = self.list_tokens[self.count].char    
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'         
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="{head}", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoPromedio{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoPromedio{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                 self.count_parentesis += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoPromedio{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -819,31 +819,31 @@ class AnalizadorSintactico():
     
     # Datos
     def instrucciones_datos(self):
-        if self.list_tokens[self.count].lexema == 'datos':
+        if self.list_tokens[self.count].lexema.lower() == 'datos':
             self.nodos += f'TokenDatos{self.count_token} [label="TokenDatos"];\n'
             self.nodos += f'Datos{self.count_token} [label="datos", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoDatos{self.count_proceso} -> TokenDatos{self.count_token} -> Datos{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoDatos{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                     self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                     self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                     self.transiciones += f'ProcesoDatos{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                     self.count_parentesis += 1
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'punto y coma':
+                    if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                         self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                         self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoDatos{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
                         self.count_igual += 1
                         self.count += 1
                         datos = self.pretty_table()
-                        self.console += f'\n--> \n{datos}'
+                        self.console += f'\n--> \n{datos} \n'
                         self.count_imprimir = 1
                     else:
                         error = 'Error sintactico ";"'
@@ -872,24 +872,24 @@ class AnalizadorSintactico():
     
     #Conteo
     def instrucciones_conteo(self):
-        if self.list_tokens[self.count].lexema == 'conteo':
+        if self.list_tokens[self.count].lexema.lower().lower() == 'conteo':
             self.nodos += f'TokenConteo{self.count_token} [label="TokenConteo"];\n'
             self.nodos += f'Conteo{self.count_token} [label="conteo", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoConteo{self.count_proceso} -> TokenConteo{self.count_token} -> Conteo{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoConteo{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                     self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                     self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                     self.transiciones += f'ProcesoConteo{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                     self.count_parentesis += 1
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'punto y coma':
+                    if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                         self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                         self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoConteo{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -917,48 +917,49 @@ class AnalizadorSintactico():
     
     # Imprimirln
     def instrucciones_imprimirln(self):
-        if self.list_tokens[self.count].lexema == 'imprimirln':
+        if self.list_tokens[self.count].lexema.lower() == 'imprimirln':
             self.nodos += f'TokenImprimirln{self.count_token} [label="TokenImprimirlm"];\n'
             self.nodos += f'Imprimirln{self.count_token} [label="imprimirln", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoImprimirln{self.count_proceso} -> TokenImprimirln{self.count_token} -> Imprimirln{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoImprimirln{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         text = self.list_tokens[self.count].char
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="\'{text}\'", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoImprimirln{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoImprimirln{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                 self.count_parentesis += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoImprimirln{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
                                     self.count_igual += 1
                                     self.count += 1
                                     self.console += f'\n--> {text}'
-                                    self.count_imprimir = 0
+                                    self.count_imprimir = 1
                                 else:
                                     error = 'Error sintactico ";"'
                                     self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
                             else:
                                 error = 'Error sintactico ")"'
                                 self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
+                                self.count += 1
                         else:
                             error = 'Error sintactico "Comillas Dobles"'
                             self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
@@ -971,6 +972,7 @@ class AnalizadorSintactico():
             else:
                 error = 'Error sintactico "("'
                 self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
+                self.count += 5
         else:
             error = 'Error sintactico "imprimirln"'
             self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
@@ -980,35 +982,35 @@ class AnalizadorSintactico():
     
     # Imprimir
     def instrucciones_imprimir(self):
-        if self.list_tokens[self.count].lexema == 'imprimir':
+        if self.list_tokens[self.count].lexema.lower() == 'imprimir':
             self.nodos += f'TokenImprimir{self.count_token} [label="TokenImprimir"];\n'
             self.nodos += f'Imprimir{self.count_token} [label="imprimir", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoImprimir{self.count_proceso} -> TokenImprimir{self.count_token} -> Imprimir{self.count_token}\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'parentesis abierto':
+            if self.list_tokens[self.count].lexema.lower() == 'parentesis abierto':
                 self.nodos += f'SimboloParentesisAbierto{self.count_parentesis} [label="ParentesisAbierto"];\n'
                 self.nodos += f'ParentesisAbierto{self.count_parentesis} [label="(", color="#bcf9eb"];\n'
                 self.transiciones += f'ProcesoImprimir{self.count_proceso} -> SimboloParentesisAbierto{self.count_parentesis} -> ParentesisAbierto{self.count_parentesis}\n'
                 self.count_parentesis += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'comillas dobles':
+                if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                     self.count += 1
-                    if self.list_tokens[self.count].lexema == 'cadena':
+                    if self.list_tokens[self.count].lexema.lower() == 'cadena':
                         text = self.list_tokens[self.count].char
                         self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
                         self.nodos += f'Cadena_Text{self.count_cadena} [label="\'{text}\'", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoImprimir{self.count_proceso} -> Cadena{self.count_cadena} -> Cadena_Text{self.count_cadena}\n'
                         self.count_cadena += 1
                         self.count += 1
-                        if self.list_tokens[self.count].lexema == 'comillas dobles':
+                        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
                             self.count += 1
-                            if self.list_tokens[self.count].lexema == 'parentesis cerrado':
+                            if self.list_tokens[self.count].lexema.lower() == 'parentesis cerrado':
                                 self.nodos += f'SimboloParentesisCerrado{self.count_parentesis} [label="ParentesisCerrado"];\n'
                                 self.nodos += f'ParentesisCerrado{self.count_parentesis} [label=")", color="#bcf9eb"];\n'
                                 self.transiciones += f'ProcesoImprimir{self.count_proceso} -> SimboloParentesisCerrado{self.count_parentesis} -> ParentesisCerrado{self.count_parentesis}\n'
                                 self.count_parentesis += 1
                                 self.count += 1
-                                if self.list_tokens[self.count].lexema == 'punto y coma':
+                                if self.list_tokens[self.count].lexema.lower() == 'punto y coma':
                                     self.nodos += f'SimboloPuntoyComa{self.count_igual} [label="PuntoyComa"];\n'
                                     self.nodos += f'PuntoyComa{self.count_igual} [label=";", color="#bcf9eb"];\n'
                                     self.transiciones += f'ProcesoImprimir{self.count_proceso} -> SimboloPuntoyComa{self.count_igual} -> PuntoyComa{self.count_igual}\n'
@@ -1048,18 +1050,18 @@ class AnalizadorSintactico():
     
     # Claves
     def instrucciones_claves(self):
-        if self.list_tokens[self.count].lexema.lower() == 'claves':
+        if self.list_tokens[self.count].lexema.lower().lower() == 'claves':
             self.transiciones += 'ProcesoClaves -> TokenClaves\n'
             self.transiciones += 'TokenClaves -> claves\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'igual':
+            if self.list_tokens[self.count].lexema.lower() == 'igual':
                 self.nodos += f'SimboloIgual{self.count_igual} [label="Igual"];\n'
                 self.transiciones += f'ProcesoClaves -> SimboloIgual{self.count_igual}\n'
                 self.nodos += f'igual{self.count_igual} [label="=", color="#bcf9eb"];\n'
                 self.transiciones += f'SimboloIgual{self.count_igual} -> igual{self.count_igual}\n'
                 self.count_igual += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'corchete abierto':
+                if self.list_tokens[self.count].lexema.lower() == 'corchete abierto':
                     self.nodos += f'SimboloCorchete{self.count_corchete} [label="CorcheteAbierto"];\n'
                     self.nodos += f'CorcheteAbierto{self.count_corchete} [label="[", color="#bcf9eb"];\n'
                     self.transiciones += f'ProcesoClaves -> SimboloCorchete{self.count_corchete} -> CorcheteAbierto{self.count_corchete}\n'
@@ -1068,7 +1070,7 @@ class AnalizadorSintactico():
                     self.nodos += f'ListClaves{self.count_list_claves} [label="ListaClaves"];\n'
                     self.transiciones += f'ProcesoClaves -> ListClaves{self.count_list_claves}\n'
                     self.lista_claves()
-                    if self.list_tokens[self.count].lexema == 'corchete cerrado':
+                    if self.list_tokens[self.count].lexema.lower() == 'corchete cerrado':
                         self.nodos += f'SimboloCorchete{self.count_corchete} [label="CorcheteCerrado"];\n'
                         self.nodos += f'CorcheteCerrado{self.count_corchete} [label="]", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoClaves -> SimboloCorchete{self.count_corchete} -> CorcheteCerrado{self.count_corchete}\n'
@@ -1095,10 +1097,10 @@ class AnalizadorSintactico():
         self.claves()
     
     def claves(self):
-        if self.list_tokens[self.count].lexema == 'comillas dobles':
+        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
             self.count += 1
             self.desagrupar_claves()
-        elif self.list_tokens[self.count].lexema == 'cadena':
+        elif self.list_tokens[self.count].lexema.lower() == 'cadena':
             cadena = self.list_tokens[self.count].char
             self.list_claves.append(cadena)
             self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
@@ -1108,12 +1110,12 @@ class AnalizadorSintactico():
             self.count += 1
             self.desagrupar_claves()
         else:
-            if self.list_tokens[self.count].lexema != 'corchete cerrado': # Cambiarlo si es necesario
+            if self.list_tokens[self.count].lexema.lower() != 'corchete cerrado': # Cambiarlo si es necesario
                 error = 'Error sintactico en claves'
                 self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
             
     def desagrupar_claves(self):
-        if self.list_tokens[self.count].lexema == 'coma':
+        if self.list_tokens[self.count].lexema.lower() == 'coma':
             self.nodos += f'SimboloComa{self.count_coma} [label="Coma"];\n'
             self.nodos += f'Coma{self.count_coma} [label=",", color="#bcf9eb"];\n'
             self.nodos += f'Clave{self.count_clave} [label="Clave"];\n'
@@ -1130,18 +1132,18 @@ class AnalizadorSintactico():
     
     # Registros
     def instrucciones_registros(self):
-        if self.list_tokens[self.count].lexema.lower() == 'registros':
+        if self.list_tokens[self.count].lexema.lower().lower() == 'registros':
             self.transiciones += 'ProcesoRegistros -> TokenRegistros\n'
             self.transiciones += 'TokenRegistros -> registros\n'
             self.count += 1
-            if self.list_tokens[self.count].lexema == 'igual':
+            if self.list_tokens[self.count].lexema.lower() == 'igual':
                 self.nodos += f'SimboloIgual{self.count_igual} [label="Igual"];\n'
                 self.transiciones += f'ProcesoRegistros -> SimboloIgual{self.count_igual}\n'
                 self.nodos += f'igual{self.count_igual} [label="="];\n'
                 self.transiciones += f'SimboloIgual{self.count_igual} -> igual{self.count_igual}\n'
                 self.count_igual += 1
                 self.count += 1
-                if self.list_tokens[self.count].lexema == 'corchete abierto':
+                if self.list_tokens[self.count].lexema.lower() == 'corchete abierto':
                     self.nodos += f'SimboloCorchete{self.count_corchete} [label="CorcheteAbierto"];\n'    
                     self.nodos += f'CorcheteAbierto{self.count_corchete} [label="[", color="#bcf9eb"];\n'
                     self.transiciones += f'ProcesoRegistros -> SimboloCorchete{self.count_corchete} -> CorcheteAbierto{self.count_corchete}\n'
@@ -1150,7 +1152,7 @@ class AnalizadorSintactico():
                     self.nodos += f'ListRegistros{self.count_list_registro} [label="ListaRegistros"];\n'
                     self.transiciones += f'ProcesoRegistros -> ListRegistros{self.count_list_registro}\n'
                     self.lista_registros()
-                    if self.list_tokens[self.count].lexema == 'corchete cerrado':
+                    if self.list_tokens[self.count].lexema.lower() == 'corchete cerrado':
                         self.nodos += f'SimboloCorchete{self.count_corchete} [label="CorcheteCerrado"];\n'
                         self.nodos += f'CorcheteCerrado{self.count_corchete} [label="]", color="#bcf9eb"];\n'
                         self.transiciones += f'ProcesoRegistros -> SimboloCorchete{self.count_corchete} -> CorcheteCerrado{self.count_corchete}\n'
@@ -1176,10 +1178,10 @@ class AnalizadorSintactico():
         self.registros()
     
     def registros(self):
-        if self.list_tokens[self.count].lexema == 'comillas dobles':
+        if self.list_tokens[self.count].lexema.lower() == 'comillas dobles':
             self.count += 1
             self.desagrupar_registros()
-        elif self.list_tokens[self.count].lexema == 'cadena':
+        elif self.list_tokens[self.count].lexema.lower() == 'cadena':
             cadena = self.list_tokens[self.count].char
             self.nodos += f'Cadena{self.count_cadena} [label="Cadena"];\n'
             self.nodos += f'Cadena_Texto{self.count_cadena} [label="{cadena}", color="#bcf9eb"];\n'
@@ -1188,7 +1190,7 @@ class AnalizadorSintactico():
             self.registros_valores.append(cadena)
             self.count += 1
             self.desagrupar_registros()
-        elif self.list_tokens[self.count].lexema == 'entero':
+        elif self.list_tokens[self.count].lexema.lower() == 'entero':
             numero_int = self.list_tokens[self.count].char
             self.nodos += f'Entero{self.count_entero} [label="Entero"];\n'
             self.nodos += f'Entero_Texto{self.count_entero} [label="{numero_int}", color="#bcf9eb"];\n'
@@ -1198,7 +1200,7 @@ class AnalizadorSintactico():
             self.count += 1
             self.desagrupar_registros()
             self.registros()
-        elif self.list_tokens[self.count].lexema == 'decimal':
+        elif self.list_tokens[self.count].lexema.lower() == 'decimal':
             numero_decimal = self.list_tokens[self.count].char
             self.nodos += f'Decimal{self.count_decimal} [label="Decimal"];\n'
             self.nodos += f'Decimal_Texto{self.count_decimal} [label="{numero_decimal}", color="#bcf9eb"];\n'
@@ -1207,7 +1209,7 @@ class AnalizadorSintactico():
             self.registros_valores.append(numero_decimal)
             self.count += 1
             self.desagrupar_registros()
-        elif self.list_tokens[self.count].lexema == 'llave abierta':
+        elif self.list_tokens[self.count].lexema.lower() == 'llave abierta':
             self.count += 1
             self.count_registro += 1
             self.nodos += f'SimboloLlaveAbierta{self.count_llave} [label="LlaveAbierta"];\n'
@@ -1220,7 +1222,7 @@ class AnalizadorSintactico():
             self.count_llave += 1
             self.count_value += 1
             self.registros()
-        elif self.list_tokens[self.count].lexema == 'llave cerrada':            
+        elif self.list_tokens[self.count].lexema.lower() == 'llave cerrada':            
             self.count += 1
             self.nodos += f'SimboloLlaveCerrada{self.count_llave} [label="LlaveCerrada"];\n'
             self.nodos += 'llaveCerrada' + str(self.count_llave) + ' [label="}", color="#bcf9eb"];\n'
@@ -1231,18 +1233,18 @@ class AnalizadorSintactico():
             self.registros_valores = []
             self.registros()
         else:
-            if self.list_tokens[self.count].lexema != 'corchete cerrado': # Cambiarlo si es necesario
+            if self.list_tokens[self.count].lexema.lower() != 'corchete cerrado': # Cambiarlo si es necesario
                 error = 'Error sintactico en registros'
                 self.list_errors.append(Error(error, 'Error sintactico', self.list_tokens[self.count].linea, self.list_tokens[self.count].columna))
     
     def desagrupar_registros(self):
-        if self.list_tokens[self.count].lexema == 'coma':
+        if self.list_tokens[self.count].lexema.lower() == 'coma':
             self.nodos += f'Value{self.count_value} [label="Valor"];\n'
             self.transiciones += f'Value{self.count_value - 1} -> Value{self.count_value}\n'
             self.count_value += 1
             self.count += 1
             self.registros()
-        elif self.list_tokens[self.count].lexema == 'llave cerrada':
+        elif self.list_tokens[self.count].lexema.lower() == 'llave cerrada':
             pass
         else:
             self.registros()
