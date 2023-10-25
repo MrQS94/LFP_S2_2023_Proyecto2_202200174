@@ -76,7 +76,7 @@ class AnalizadorSintactico():
         self.lista_instrucciones()
     
     def lista_instrucciones(self):
-        if self.list_tokens[self.count].lexema.lower().lower() == 'registros':
+        if self.list_tokens[self.count].lexema.lower() == 'registros':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n' 
@@ -86,7 +86,7 @@ class AnalizadorSintactico():
             self.instrucciones_registros()    
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'claves':
+        elif self.list_tokens[self.count].lexema.lower() == 'claves':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -96,13 +96,13 @@ class AnalizadorSintactico():
             self.instrucciones_claves()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'comentario simple':
+        elif self.list_tokens[self.count].lexema.lower() == 'comentario simple':
             self.count += 1
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'comillas simples':
+        elif self.list_tokens[self.count].lexema.lower() == 'comillas simples':
             self.count += 1
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'imprimir':
+        elif self.list_tokens[self.count].lexema.lower() == 'imprimir':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -113,7 +113,7 @@ class AnalizadorSintactico():
             self.instrucciones_imprimir()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'imprimirln':
+        elif self.list_tokens[self.count].lexema.lower() == 'imprimirln':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -124,7 +124,7 @@ class AnalizadorSintactico():
             self.instrucciones_imprimirln()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'datos':
+        elif self.list_tokens[self.count].lexema.lower() == 'datos':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -135,7 +135,7 @@ class AnalizadorSintactico():
             self.instrucciones_datos()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'conteo':
+        elif self.list_tokens[self.count].lexema.lower() == 'conteo':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -146,7 +146,7 @@ class AnalizadorSintactico():
             self.instrucciones_conteo()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'promedio':
+        elif self.list_tokens[self.count].lexema.lower() == 'promedio':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -157,7 +157,7 @@ class AnalizadorSintactico():
             self.instrucciones_promedio()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'contarsi':
+        elif self.list_tokens[self.count].lexema.lower() == 'contarsi':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -168,7 +168,7 @@ class AnalizadorSintactico():
             self.instrucciones_contarsi()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'sumar':
+        elif self.list_tokens[self.count].lexema.lower() == 'sumar':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -179,7 +179,7 @@ class AnalizadorSintactico():
             self.instrucciones_sumar()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'max':
+        elif self.list_tokens[self.count].lexema.lower() == 'max':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -190,7 +190,7 @@ class AnalizadorSintactico():
             self.instrucciones_max()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'min':
+        elif self.list_tokens[self.count].lexema.lower() == 'min':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -201,7 +201,7 @@ class AnalizadorSintactico():
             self.instrucciones_min()
             self.transiciones += f'Instrucciones{self.count_instrucciones - 1} -> Instrucciones{self.count_instrucciones}\n'
             self.lista_instrucciones()
-        elif self.list_tokens[self.count].lexema.lower().lower() == 'exportarreporte':
+        elif self.list_tokens[self.count].lexema.lower() == 'exportarreporte':
             self.count_instrucciones += 1
             self.count_instruccion += 1
             self.nodos += f'Instrucciones{self.count_instrucciones} [label="Instrucciones"];\n'
@@ -215,7 +215,7 @@ class AnalizadorSintactico():
     
     # ExportarReporte
     def instrucciones_exportar(self):
-        if self.list_tokens[self.count].lexema.lower().lower() == 'exportarreporte':
+        if self.list_tokens[self.count].lexema.lower() == 'exportarreporte':
             self.nodos += f'TokenExportar{self.count_token} [label="TokenExportar"];\n'
             self.nodos += f'Exportar{self.count_token} [label="exportarReporte", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoExportar{self.count_proceso} -> TokenExportar{self.count_token} -> Exportar{self.count_token}\n'
@@ -872,7 +872,7 @@ class AnalizadorSintactico():
     
     #Conteo
     def instrucciones_conteo(self):
-        if self.list_tokens[self.count].lexema.lower().lower() == 'conteo':
+        if self.list_tokens[self.count].lexema.lower() == 'conteo':
             self.nodos += f'TokenConteo{self.count_token} [label="TokenConteo"];\n'
             self.nodos += f'Conteo{self.count_token} [label="conteo", color="#bcf9eb"];\n'
             self.transiciones += f'ProcesoConteo{self.count_proceso} -> TokenConteo{self.count_token} -> Conteo{self.count_token}\n'
@@ -1050,7 +1050,7 @@ class AnalizadorSintactico():
     
     # Claves
     def instrucciones_claves(self):
-        if self.list_tokens[self.count].lexema.lower().lower() == 'claves':
+        if self.list_tokens[self.count].lexema.lower() == 'claves':
             self.transiciones += 'ProcesoClaves -> TokenClaves\n'
             self.transiciones += 'TokenClaves -> claves\n'
             self.count += 1
@@ -1132,7 +1132,7 @@ class AnalizadorSintactico():
     
     # Registros
     def instrucciones_registros(self):
-        if self.list_tokens[self.count].lexema.lower().lower() == 'registros':
+        if self.list_tokens[self.count].lexema.lower() == 'registros':
             self.transiciones += 'ProcesoRegistros -> TokenRegistros\n'
             self.transiciones += 'TokenRegistros -> registros\n'
             self.count += 1
